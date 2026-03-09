@@ -17,14 +17,15 @@ A fully transparent, true desktop matrix digital rain screensaver built with Ele
 2. Run `npm install`.
 3. Run `npm start` to test the overlay. It will cover all monitors. Press any key or move your mouse to close it.
 
-### Building
-To package as a Windows screensaver:
-```bash
-npm install -D electron-packager
-npx electron-packager . MatrixScreensaver --platform=win32 --arch=x64 --out=dist --overwrite
-```
-Afterwards, navigate into the generated directory in `/dist/`, copy `MatrixScreensaver.exe`, and rename it to `MatrixScreensaver.scr`.
-You can right-click the `.scr` file in Windows and select "Install" to correctly bind it to your Control Panel settings.
+### Installation Scripts
+To automatically download dependencies, package the executable, and apply it to your Windows Control Panel, we have provided auto-install scripts for your preferred environment:
+
+- **Windows Batch**: Double click `install.bat` or run `.\install.bat` in CMD.
+- **PowerShell**: Run `.\install.ps1` in a PowerShell window.
+- **Python**: Run `python install.py`.
+- **Bash (WSL/Git Bash)**: Run `./install.sh`.
+
+These scripts will automatically compile the screensaver into a `.scr` file and set your Windows Registry to trigger the digital rain after 5 minutes of inactivity.
 
 ## Developer Rules & Protocols
 All architecture decisions are captured in the `.agents` folder, describing the rules and constraints the AI swarm followed to build this.
