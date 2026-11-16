@@ -7,7 +7,7 @@ A fully transparent, true desktop matrix digital rain screensaver built with Ele
 - **Multi-Monitor Support**: Spawns a dedicated renderer on every connected display using `screen.getAllDisplays()`.
 - **4K Optimized**: Scales perfectly utilizing `window.devicePixelRatio` for razor-sharp rendering on 1080p and 2160p displays without massive performance drops.
 - **Classic Matrix Aesthetics**: Half-width Katakana, Latin characters, fading trails using `destination-out` composite operations.
-- **Native Screensaver Integration**: Built via `electron-packager` into a native Windows `.scr` file, responding instantly to keyboard/mouse movement to quit.
+- **Native Screensaver Integration**: Built via `@electron/packager` into a native Windows `.scr` file, responding instantly to keyboard/mouse movement to quit.
 - **Agent Swarm Architecture**: Developed by an AI Agent Swarm consisting of a frontend developer, a performance engineer, and a designer.
 
 ## Getting Started

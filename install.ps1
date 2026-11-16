@@ -11,7 +11,7 @@ Write-Host "`nInstalling dependencies..."
 npm install
 
 Write-Host "`nPackaging Electron App..."
-npx electron-packager . MatrixScreensaver --platform=win32 --arch=x64 --out=dist --overwrite
+npx @electron/packager . MatrixScreensaver --platform=win32 --arch=x64 --out=dist --overwrite
 
 Write-Host "`nApplying Windows Screensaver settings..."
 $BasePath = (Get-Location).Path

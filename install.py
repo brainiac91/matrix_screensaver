@@ -14,7 +14,7 @@ print("\nInstalling dependencies...")
 subprocess.run("npm install", shell=True, check=True)
 
 print("\nPackaging Electron App...")
-subprocess.run("npx electron-packager . MatrixScreensaver --platform=win32 --arch=x64 --out=dist --overwrite", shell=True, check=True)
+subprocess.run("npx @electron/packager . MatrixScreensaver --platform=win32 --arch=x64 --out=dist --overwrite", shell=True, check=True)
 
 print("\nApplying Windows Screensaver settings...")
 base_path = os.getcwd()

@@ -17,7 +17,7 @@ call npm install
 
 echo.
 echo Packaging Electron App...
-call npx electron-packager . MatrixScreensaver --platform=win32 --arch=x64 --out=dist --overwrite
+call npx @electron/packager . MatrixScreensaver --platform=win32 --arch=x64 --out=dist --overwrite
 
 echo.
 echo Applying Windows Screensaver settings...

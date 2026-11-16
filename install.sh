@@ -14,7 +14,7 @@ echo -e "\nInstalling dependencies..."
 npm install
 
 echo -e "\nPackaging Electron App for Windows..."
-npx electron-packager . MatrixScreensaver --platform=win32 --arch=x64 --out=dist --overwrite
+npx @electron/packager . MatrixScreensaver --platform=win32 --arch=x64 --out=dist --overwrite
 
 echo -e "\nApplying Windows Screensaver settings..."
 # Convert MSYS/WSL path to Windows format if running in bash on Windows

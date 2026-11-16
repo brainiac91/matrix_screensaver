@@ -40,13 +40,20 @@ function init() {
 window.addEventListener('resize', init);
 init();
 
+// Advance the rain once every N frames (higher = slower)
+const FRAME_SKIP = 3;
+let frame = 0;
+
 function draw() {
+    requestAnimationFrame(draw);
+    if (++frame % FRAME_SKIP !== 0) return;
+
     // Crucial for transparent background:
     // Instead of drawing a black rectangle with low opacity to dim previous letters,
     // we use destination-out to gradually erase the canvas over time.
     // This allows the desktop to remain visible through the blank areas.
     ctx.globalCompositeOperation = 'destination-out';
-    ctx.fillStyle = 'rgba(0, 0, 0, 0.1)'; // Adjust alpha for trail length
+    ctx.fillStyle = 'rgba(0, 0, 0, 0.05)'; // Lower alpha = longer trails
     ctx.fillRect(0, 0, width, height);
 
     // Reset composite operation to draw new letters
@@ -83,8 +90,6 @@ function draw() {
         // Increment Y position
         drops[i]++;
     }
-
-    requestAnimationFrame(draw);
 }
 
 
